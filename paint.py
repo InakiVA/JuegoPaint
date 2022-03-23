@@ -2,7 +2,7 @@
 
 Exercises
 
-1. Add a color.
+1. Add a color.-Iñaki
 2. Complete circle.
 3. Complete rectangle.
 4. Complete triangle.
@@ -74,6 +74,7 @@ setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
+onkey(lambda: color('yellow'), 'Y') #agregué el amarillo
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
