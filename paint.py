@@ -4,8 +4,8 @@ Exercises
 
 1. Add a color.-Iñaki
 2. Complete circle.
-3. Complete rectangle.
-4. Complete triangle.
+3. Complete rectangle.-Iñaki
+4. Complete triangle.-Iñaki
 5. Add width parameter.
 """
 
@@ -41,13 +41,31 @@ def circle(start, end):
     pass  # TODO
 
 
-def rectangle(start, end):
+def rectangle(start, end):#hace rectángulo alto
     """Draw rectangle from start to end."""
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    for count in range(4):
+        forward(end.x - start.x)
+        if count%2==1:
+            forward((end.x-start.x)/2)
+        left(90)
+    end_fill()
     pass  # TODO
 
 
-def triangle(start, end):
+def triangle(start, end): #hace triángulo equilátero
     """Draw triangle from start to end."""
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    for count in range(3):
+        forward(end.x - start.x)
+        left(120)
+    end_fill()
     pass  # TODO
 
 
