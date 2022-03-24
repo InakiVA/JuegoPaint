@@ -3,10 +3,9 @@
 Exercises
 
 1. Add a color.-Iñaki
-2. Complete circle.
+2. Complete circle.-Edrick
 3. Complete rectangle.-Iñaki
 4. Complete triangle.-Iñaki
-5. Add width parameter.
 """
 
 from turtle import *
