@@ -2,14 +2,16 @@
 
 Exercises
 
-1. Add a color.-Iñaki
-2. Complete circle. -Edrick
-3. Complete rectangle.-Iñaki
-4. Complete triangle.-Iñaki
+1. Add a color.
+2. Complete circle.
+3. Complete rectangle.
+4. Complete triangle.
+5. Add width parameter.
 """
 
 from turtle import *
-
+from math import pi
+from math import sqrt
 from freegames import vector
 
 
@@ -35,19 +37,20 @@ def square(start, end):
     end_fill()
 
 
-def circle(start, end):
+def circulo(start, end):
     """Draw circle from start to end."""
-   r= sqrt((end.y-start.y)**2+(end.x-start.x)**2)
-   up()
-   goto(start.x, start.y)
-   down()
-   begin_fill() 
-   circle(r)
-   end_fill()
-   #pass  # TODO
+    r= sqrt((end.y-start.y)**2+(end.x-start.x)**2)
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill() 
+    circle(r)
+    end_fill()
+    pass
 
 
-def rectangle(start, end):#hace rectángulo alto
+
+def rectangle(start, end):
     """Draw rectangle from start to end."""
     up()
     goto(start.x, start.y)
@@ -59,10 +62,11 @@ def rectangle(start, end):#hace rectángulo alto
             forward((end.x-start.x)/2)
         left(90)
     end_fill()
+
     pass  # TODO
 
 
-def triangle(start, end): #hace triángulo equilátero
+def triangle(start, end):
     """Draw triangle from start to end."""
     up()
     goto(start.x, start.y)
@@ -72,6 +76,7 @@ def triangle(start, end): #hace triángulo equilátero
         forward(end.x - start.x)
         left(120)
     end_fill()
+
     pass  # TODO
 
 
@@ -98,16 +103,16 @@ setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
-onkey(lambda: color('yellow'), 'Y') #agregué el amarillo
+onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
-onkey(lambda: grosor('10'), 'Q')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
-onkey(lambda: store('shape', circle), 'c')
+onkey(lambda: store('shape', circulo), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
+
