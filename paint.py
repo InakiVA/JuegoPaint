@@ -37,15 +37,14 @@ def square(start, end):
 
 def circle(start, end):
     """Draw circle from start to end."""
-    begin_fill()
-    turtle.speed(15)
-    for i in range(40):
-        turtle.forward(100)
-        turtle.right(90)
-        for j in range(1):
-                turtle.forward(100)
-                  turtle.right(80)
-    pass  # TODO
+   r= sqrt((end.y-start.y)**2+(end.x-start.x)**2)
+   up()
+   goto(start.x, start.y)
+   down()
+   begin_fill() 
+   circle(r)
+   end_fill()
+   #pass  # TODO
 
 
 def rectangle(start, end):#hace rectángulo alto
