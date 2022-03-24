@@ -3,7 +3,7 @@
 Exercises
 
 1. Add a color.-Iñaki
-2. Complete circle.-Edrick
+2. Complete circle. -Edrick
 3. Complete rectangle.-Iñaki
 4. Complete triangle.-Iñaki
 """
@@ -37,6 +37,14 @@ def square(start, end):
 
 def circle(start, end):
     """Draw circle from start to end."""
+    begin_fill()
+    turtle.speed(15)
+    for i in range(40):
+        turtle.forward(100)
+        turtle.right(90)
+        for j in range(1):
+                turtle.forward(100)
+                  turtle.right(80)
     pass  # TODO
 
 
@@ -97,6 +105,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: grosor('10'), 'Q')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
